@@ -31,11 +31,8 @@ const Generate = () => {
           min={1}
           required
         />
-        <select value={month} onChange={(e) => setMonth(e.target.value)} required>
-          <option value=''>Select Month</option>
-          <option selected value='1'>
-              Select Month
-          </option>
+       <select value={month} onChange={(e) => setMonth(e.target.value)} required>
+          <option value='1'>Select Month</option>
           <option value='1'>January</option>
           <option value='2'>February</option>
           <option value='3'>March</option>
