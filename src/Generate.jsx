@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Generate = () => {
   const [name, setName] = useState('');
   const [day, setDay] = useState(''); // Updated initial state to an empty string
-  const [month, setMonth] = useState(1);
+  const [month, setMonth] = useState(0);
   const [link, setLink] = useState('');
   const [error, setError] = useState('');
 
@@ -41,21 +41,22 @@ const Generate = () => {
         <select
           value={month}
           onChange={(e) => setMonth(e.target.value)}
+          placeholder='Select Month'
           required
         >
-          <option value='1'>Select Month</option>
-          <option value='2'>January</option>
-          <option value='3'>February</option>
-          <option value='5'>March</option>
-          <option value='6'>April</option>
-          <option value='7'>May</option>
-          <option value='8'>June</option>
-          <option value='9'>July</option>
-          <option value='10'>August</option>
-          <option value='11'>September</option>
-          <option value='12'>October</option>
-          <option value='13'>November</option>
-          <option value='14'>December</option>
+          <option value='0'>Select Month</option>
+          <option value='1'>January</option>
+          <option value='2'>February</option>
+          <option value='3'>March</option>
+          <option value='4'>April</option>
+          <option value='5'>May</option>
+          <option value='6'>June</option>
+          <option value='7'>July</option>
+          <option value='8'>August</option>
+          <option value='9'>September</option>
+          <option value='10'>October</option>
+          <option value='11'>November</option>
+          <option value='12'>December</option>
         </select>
       </div>
       <button type='submit' className='btn' onClick={() => generateLink()}>
