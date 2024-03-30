@@ -3,17 +3,24 @@ import { Link } from 'react-router-dom';
 
 const Generate = () => {
   const [name, setName] = useState('');
-  const [day, setDay] = useState(1);
+  const [day, setDay] = useState(''); // Updated initial state to an empty string
   const [month, setMonth] = useState(1);
   const [link, setLink] = useState('');
+  const [error, setError] = useState('');
+
   const generateLink = () => {
+    if (!name || !day || !month) {
+      setError('All fields are required!');
+      return;
+    }
     setLink(
       `https://birthday-wisher-lakshay.vercel.app/birthday/${name}/${day}/${month}`
     );
   };
+
   return (
     <div className='page'>
-      <h1>Generate Here</h1>
+      <h1>Generate Countdown Here</h1>
       <div className='form'>
         <input
           type='text'
@@ -31,7 +38,11 @@ const Generate = () => {
           min={1}
           required
         />
-       <select value={month} onChange={(e) => setMonth(e.target.value)} required>
+        <select
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+          required
+        >
           <option value='1'>Select Month</option>
           <option value='1'>January</option>
           <option value='2'>February</option>
@@ -50,6 +61,8 @@ const Generate = () => {
       <button type='submit' className='btn' onClick={() => generateLink()}>
         Generate Countdown !
       </button>
+<br/>
+      {error && <p className='error'>{error}</p>}
 
       {link !== '' ? (
         <>
