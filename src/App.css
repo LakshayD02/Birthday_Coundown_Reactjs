@@ -13,10 +13,11 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--main-bg-color-dark);
+  background: linear-gradient(00deg, #1f1f25e1, #000000);
   color: var(--main-text-color-dark);
-  background-color: #1d1d1d;
 }
+
+
 .page {
   width: 100%;
   height: 100vh;
@@ -30,7 +31,7 @@ body {
   font-size: 45px;
 }
 .highlight {
-  color: #4f3fffe1;
+  color: #00bbff;
 }
 .countdown-wrapper {
   max-width: 800px;
@@ -41,7 +42,7 @@ body {
   margin: 45px 0;
 }
 .countdown-box {
-  background-color:  #4f3fffe1;
+  background-color:  #00bbffd5;
   font-size: 50px;
   font-weight: 700;
   color: #ffffff;
@@ -67,7 +68,7 @@ body {
 .birthdate {
   font-size: 25px;
   font-weight: 600;
-  color: #4f3fffe1;
+  color: #00bbff;
 }
 .credits {
   margin-top: 30px;
@@ -106,15 +107,15 @@ input {
 select {
   width: 310px;
   height: 50px;
-  background-color: #1d1d1d;
-  color: rgb(255, 255, 255);
+  background: transparent;
+  color: var(--main-text-color-dark);
   font-family: Montserrat, sans-serif;
   border: 2px rgba(255, 255, 255, 0.164) solid;
   padding-left: 20px;
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 17px;
   margin-top: 10px;
   outline: none;
 }
@@ -124,7 +125,7 @@ select:focus,
   border: 1px rgba(255, 255, 255, 1) solid;
   transition: all 0.5s;
 }
-.select option{
+select option{
   color: black;
 }
 .btn {
@@ -143,10 +144,11 @@ select:focus,
   color: white;
 }
 a {
-  color: #7f78d2;
+  color: #00bbff;
   font-weight: bold;
   margin-top: 20px;
   font-size: 21px;
+  outline: none;
 }
 
 a:hover{
